@@ -1,17 +1,25 @@
 <script setup>
 import Button from './Button.vue';
-
-
 </script>
 
 <template>
     <div class="about">
         <section class="your-business">
+            <div class="networks">
+                <Button :round="true">
+                    <img src="../assets/instagram.svg"/>
+                </Button>
+                <Button :round="true">
+                    <img src="../assets/whatsapp.svg"/>
+                </Button>
+            </div>
+            <p class="tag">Video artist, Facebook ads expert</p>
             <div class="invisible">
                 <div class="background-rectangle">
                     <img 
-                        src="../assets/general.svg" 
-                        alt="Mujer posando"
+                        class="img-juan-posando"
+                        src="../assets/general.svg"
+                        alt="Juan posando"
                     />
                     <h2>
                         Your 
@@ -27,14 +35,14 @@ import Button from './Button.vue';
         </section>
         <section class="hello">
             <div>
-                <p>PARENTAL ADVISORY: EXPLICIT HONESTY</p>
-                <p>
+                <p class="intro">PARENTAL ADVISORY: EXPLICIT HONESTY</p>
+                <p class="intro">
                     Hi what’s up!
                     Juan here, I’m from Colombia.
                     With my team, we are a Latin army with a single 
-                    military objective: MAKE YOU SELL MASSIVE.
+                    military objective: <span class="absolute-black-text">MAKE YOU SELL MASSIVE.</span>
                 </p>
-                <p>
+                <p class="intro">
                     I will handle your marketing campaign with 
                     immense power, humble as f**k
                 </p>
@@ -53,8 +61,22 @@ import Button from './Button.vue';
 }
 
 .your-business {
+    /* display: flex;
+    justify-content: center; */
+}
+
+.networks {
     display: flex;
-    justify-content: center;
+    gap: 1.4rem;
+    margin-bottom: 3.2rem;
+    margin-left: 20rem;
+}
+
+.tag {
+    font-size: 1.2rem;
+    color: var(--light-gray-color);
+    margin: 0;
+    font-weight: 500;
 }
 
 .invisible {
@@ -70,7 +92,7 @@ import Button from './Button.vue';
     background-color: var(--pink-color);
 }
 
-img {
+.img-juan-posando {
     position: absolute;
     width: 22rem;
     height: auto;
@@ -105,8 +127,13 @@ h2 {
     text-align: center;
 }
 
-p {
+.intro {
     font-size: 1.4rem;
+    color: var(--gray-color);
+}
+
+.absolute-black-text {
+    color: #000;
 }
 
 @media (min-width: 768px) {
@@ -114,10 +141,14 @@ p {
         display: grid;
         justify-content: center;
         grid-template-rows: 0;
-        height: 35rem;
+        height: 45rem;
     }
     .your-business {
         display: block;
+    }
+
+    .tag {
+        font-size: 1.6rem;
     }
     .invisible {
         display: flex;
@@ -130,7 +161,7 @@ p {
         height: 24rem;
     }
 
-    img {
+    .img-juan-posando {
         width: 27rem;
         left: auto;
         right: 7.5rem;
@@ -158,11 +189,11 @@ p {
     .hello > div {
         width: 37%;
         position: absolute;
-        top: 9.6rem;
+        top: 17.6rem;
         text-align: left;
     }
 
-    p {
+    .intro {
         font-size: 1.6rem;
     }
 }
@@ -184,7 +215,7 @@ p {
         height: 30rem;
     }
 
-    img {
+    .img-juan-posando {
         width: 38rem;
         right: 8.5rem;
     }
@@ -194,7 +225,7 @@ p {
         top: 0;
     }
 
-    p {
+    .intro {
         font-size: 2rem;
     }
 }

@@ -15,8 +15,7 @@ onMounted(async () => {
 <template>
     <section class="hero">
         <aside>
-            <video :src="url" autoplay/>
-            <p>Audiovisual design, Facebook ads, Motion graphics, VFX Artist</p>
+            <video src="../assets/burst.mp4" autoplay muted preload="auto"/>
             <div class="word-bx">
               <h1>I am the</h1>
               <div>
@@ -60,17 +59,16 @@ h1 {
     float: left;
 }
 
-p {
-  font-size: 1.2rem;
-  color: var(--light-gray-color);
-}
-
 .word-bx{
     position: absolute;
     width: 65%;
     top: 50%;
-    left: 50%;
+    left: 35%;
     transform: translate(-50%, -50%);
+}
+
+video {
+    width: 100%;
 }
 
 div {
@@ -90,7 +88,8 @@ li {
 }
 
 .words { 
-  padding-left: 1.6rem;
+    padding-left: 1.6rem;
+    color: #fff;
     animation: words 10s cubic-bezier(0.23, 1, 0.32, 1.2) infinite; 
 }
 
@@ -159,10 +158,6 @@ li {
       font-size: 4.8rem;
     }
 
-    p {
-        font-size: 1.6rem;
-    }
-
     li {
       font-size: 4.8rem;
     }
@@ -171,7 +166,7 @@ li {
 @media (min-width: 900px) {
     .hero {
         position: relative;
-        height: 58vh;
+        height: 70vh;
     }
 
     h1 {

@@ -1,33 +1,34 @@
 <script setup>
-const array = Array(2)
+const array = Array(4)
 </script>
 
 <template>
-    <section v-for="item in array">
-        <aside>
-            <div class="name"/>
-            <div class="description"/>
-        </aside>
-        <div class="video"/>
-    </section>
+    <ul>
+        <li>
+            <div class="video video-horizontal"/>
+        </li>
+        <li v-for="item in array">
+            <div class="video"/>
+        </li>
+    </ul>
 </template>
 
 <style scoped>
-section {
+ul {
     display: flex;
-    justify-content: center;
-    margin-bottom: 2.4rem;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0;
+    gap: 2.4rem;
+}
+
+li {
+    position: relative;
+    list-style: none;
 }
 
 div {
     background-color: var(--ultra-light-gray);
-}
-.name {
-    display: none;
-}
-
-.description {
-    display: none;
 }
 
 .video {
@@ -36,25 +37,15 @@ div {
     border-radius: 1.4rem;
 }
 
+.video-horizontal {
+    width: 75rem;
+    height: 40rem;
+}
+
 @media (min-width: 768px) {
     section {
         justify-content: space-between;
         align-items: center;
-    }
-    
-    .name {
-        display: block;
-        width: 35rem;
-        height: 5rem;
-        border-radius: 1.4rem;
-    }
-
-    .description {
-        display: block;
-        width: 30rem;
-        height: 3rem;
-        margin-top: 1.4rem;
-        border-radius: 1.4rem;
     }
 
     .video {

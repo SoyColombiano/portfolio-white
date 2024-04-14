@@ -22,22 +22,14 @@ const handleRefContact = (value) => {
         <Hero />
         <div class="container">
             <About />
-            <marquee>
-                INMENSE POWER INMENSE POWER INMENSE POWER INMENSE POWER
-            </marquee>
             <Projects />
             <Services />
-            <Contact @handleRefContact="handleRefContact"/>
         </div>
     </main>
-    <Footer />
+    <Footer @handleRefContact="handleRefContact" />
 </template>
 
 <style scoped>
-marquee {
-    font-size: 8rem;
-}
-
 .container {
     display: flex;
     flex-direction: column;

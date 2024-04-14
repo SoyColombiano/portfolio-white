@@ -1,41 +1,62 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 import { getProjects } from '../services/projects.service'
+import ProjectsSkelelon from './ProjectsSkeleton.vue'
+
 const projects = ref([])
+const loading = ref(true)
 
 onMounted(async () => {
     getProjects()
         .then(data => {
-            data.forEach(project => {
+            data?.forEach(project => {
                 projects.value.push(project.data())
             })
+            loading.value = false
         })
 })
 </script>
 
 <template>
-    <ul>
+    <ul v-show="!loading">
         <li v-for="project in projects">
-            <div>
+            <div 
+                :class="{
+                    'video-horizontal': project.horizontal,
+                    'height-100': project.horizontal,
+                }"
+            >
                 <h1>{{ project.name }}</h1>
                 <p>{{ project.description }}</p>
             </div>
-            <video :src="project.url" controls/>
+            <video 
+                :src="project.url" 
+                :class="{
+                    'video-horizontal': project.horizontal,
+                }"
+                controls
+            />
         </li>
     </ul>
+    <ProjectsSkelelon v-show="loading" />
 </template>
 
 <style scoped>
 ul {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0;
     gap: 2.4rem;
 }
 
 li {
-    display: flex;
-    justify-content: center;
+    position: relative;
     list-style: none;
+}
+
+li:hover div {
+    display: flex
 }
 
 h1 {
@@ -51,21 +72,34 @@ p {
 }
 
 div {
+    display: none;
     position: absolute;
+    margin-top: 0;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 0;
     width: 35rem;
-    background-color: #0000008e;
+    height: 80%;
+    background: linear-gradient(#0000008e 80%, transparent);
     border-radius: 1.4rem;
     padding: 1.4rem;
     box-sizing: border-box;
     z-index: 1;
 }
 
+.height-100 {
+    height: 45%;
+}
+
 video {
-    position: relative;
     width: 35rem;
     border-radius: 1.4rem;
     text-align: center;
     background-color: #2c2c2c;
+}
+
+.video-horizontal {
+    width: 100%;
 }
 
 @media (min-width: 768px) {
@@ -74,21 +108,12 @@ video {
         align-items: center;
     }
 
-    div {
-        position: static;
-        width: auto;
-        background: none;
-        padding: 0;
-    }
-
     h1 {
         font-size: 4rem;
-        color: #000;
     }
 
     p {
         font-size: 2rem;
-        color: #000;
     }
 
     video {
