@@ -1,20 +1,22 @@
 <script setup>
-import Logo from './Logo.vue';
+import Fiverr from './Fiverr.vue';
+import Contact from './Contact.vue';
 </script>
 
 <template>
     <footer>
-        <section class="info">
-            <Logo />
+        <section class="ramper">
+            <section class="info">
+               <Contact @handleRefContact="handleRefContact" />
+            </section>
             <section>
-                <p>juane.dream@gmail.com</p>
-                <p>+57 319 420 6228</p>
+                <Fiverr />
             </section>
         </section>
         <section class="by">
             <small>
                 Developed by 
-                <a href="https:/sneidernarvaez.site" target="_blank">
+                <a href="https://sneidernarvaez.site" target="_blank">
                     Sneider Narvaez
                 </a>
             </small>
@@ -23,21 +25,25 @@ import Logo from './Logo.vue';
 </template>
 
 <style scoped>
+.ramper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2.5rem;
+    gap: 4rem;
+}
+
 .info {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     padding-top: 6.4rem;
     padding-bottom: 3.2rem;
+    gap: 3.4rem;
 }
 
 .by {
     text-align: center;
-}
-
-p {
-    font-size: 1.6rem;
-    color: var(--light-gray-color);
-    margin: .8rem 0;
 }
 
 small {
@@ -48,5 +54,14 @@ small {
 
 a {
     color: var(--light-gray-color);
+}
+
+@media (min-width: 768px) {
+    .ramper {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 6.4rem 0;
+        margin-bottom: 0;
+    }
 }
 </style>

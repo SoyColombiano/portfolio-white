@@ -43,6 +43,6 @@ const { round, click } = toRefs(props)
         height: 5rem;
         flex-shrink: 0;
         border-radius: 100%;
-        border: solid .2rem var(--light-gray-color);
+        border: solid .1rem var(--ultra-light-gray);
     }
 </style>

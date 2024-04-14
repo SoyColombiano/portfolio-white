@@ -1,7 +1,7 @@
 <script setup>
 import { onMounted, ref, defineEmits } from 'vue';
 import Button from './Button.vue';
-import Fiverr from './Fiverr.vue';
+import Logo from './Logo.vue';
 
 const refContact = ref(null)
 const emit = defineEmits(['handleRefContact'])
@@ -13,37 +13,52 @@ onMounted(() => {
 </script>
 
 <template>
-    <section ref="refContact">
-        <p>Want to start a project?</p>
-        <h1>Let’s Talk</h1>
-        <div>
-            <Fiverr />
-            <Button>CONTACT ME</Button>
-        </div>
+    <section class="contact-me">
+        <p class="wantToStartAProject">
+            Want to start a project?
+        </p>
+        <h1 class="letTalk">Let’s Talk</h1>
+        <Button>CONTACT ME</Button>
+    </section>
+    <section>
+        <section class="container">
+            <p class="contact-info">
+                juane.dream@gmail.com
+            </p>
+            <p class="contact-info">
+                +57 319 420 6228
+            </p>
+        </section>
+        <Logo />
     </section>
 </template>
 
 <style scoped>
-section {
-    text-align: center;
+.contact-me {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
 }
-
-p {
+.wantToStartAProject {
     font-size: 2rem;
     color: var(--light-gray-color);
     margin: 0;
 }
 
-h1 {
+.letTalk {
     font-size: 6.4rem;
-    margin-top: 2.4rem;
-    margin-bottom: 4.8rem;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
 }
 
-div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2.4rem;
+.container {
+    margin-bottom: 1.4rem;
 }
+
+.contact-info {
+    font-size: 2rem;
+    color: var(--light-gray-color);
+    margin: 0;
+}
+
 </style>
