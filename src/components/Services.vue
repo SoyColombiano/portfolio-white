@@ -12,7 +12,7 @@
             </li>
             <li>
                 <h2>Facebook Ads (Meta)</h2>
-                <p>Strategic master plan for a successful ads campaign.</p>
+                <p>Chupe cabeza</p>
             </li>
         </ul>
     </section>
