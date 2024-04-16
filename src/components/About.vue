@@ -39,8 +39,7 @@ import Button from './Button.vue';
                 <p class="intro">
                     Hi what’s up!
                     Juan here, I’m from Colombia.
-                    With my team, we are a Latin army with a single 
-                    military objective: <span class="absolute-black-text">MAKE YOU SELL MASSIVE.</span>
+                    <span class="absolute-black-text">MAKE YOU SELL MASSIVE.</span>
                 </p>
                 <p class="intro">
                     I will handle your marketing campaign with 
