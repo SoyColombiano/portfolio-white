@@ -35,19 +35,21 @@ import Button from './Button.vue';
         </section>
         <section class="hello">
             <div>
-                <p class="intro">PARENTAL ADVISORY: EXPLICIT HONESTY</p>
+            
                 <p class="intro">
                     Hi what’s up!
-                    Juan here, I’m from Colombia.
-                    <span class="absolute-black-text">MAKE YOU SELL MASSIVE.</span>
+                    <br>
+                    Juan here, 
+                    <br>
+                    I can create <span class="absolute-black-text">supercharged videos</span> for your brand.
                 </p>
-                <p class="intro">
-                    I will handle your marketing campaign with 
-                    immense power, humble as f**k
-                </p>
+             
+              
+                <a href="https://api.whatsapp.com/send?phone=573194206228&text=Hi!%0AIm%20interested%20in%20the%20Video%20service" target="_blank">
                 <Button>
                     LEAVE ME A MESSAGE
                 </Button>
+                </a>
             </div>
         </section>
     </div>
