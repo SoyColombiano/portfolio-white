@@ -3,16 +3,16 @@
         <h1>Services</h1>
         <ul>
             <li>
-                <h2>Video edition</h2>
-                <p>You need an ad with Inmense Power.</p>
+                <h2>Video editing</h2>
+                <p>You need an ad with Immense Power.</p>
             </li>
             <li>
-                <h2>Graphic Design</h2>
-                <p>Don’t leave your visual identity to chance.</p>
+                <h2>Filmmaking</h2>
+                <p>You want me to shot your ideas</p>
             </li>
             <li>
-                <h2>Facebook Ads (Meta)</h2>
-                <p>Strategic master plan for a successful ads campaign.</p>
+                <h2>Youtube Editor</h2>
+                <p>Do you want me to edit for your channel? Let's talk</p>
             </li>
         </ul>
     </section>

@@ -1,7 +1,7 @@
 <template>
     <picture>
         <img src="../assets/logo.svg" alt="Logo"/>
-        <span>Audiovisual <br /> designer</span>
+        <span>Video <br /> Artist</span>
     </picture>
 </template>
 

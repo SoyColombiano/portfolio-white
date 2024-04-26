@@ -13,7 +13,7 @@ import Button from './Button.vue';
                     <img src="../assets/whatsapp.svg"/>
                 </Button>
             </div>
-            <p class="tag">Video artist, Facebook ads expert</p>
+            <p class="tag">Video artist</p>
             <div class="invisible">
                 <div class="background-rectangle">
                     <img 
@@ -37,11 +37,15 @@ import Button from './Button.vue';
             <div>
             
                 <p class="intro">
-                    Hi what’s up!
+                    Hi, Juan here :)
                     <br>
-                    Juan here, 
+                    
+                    
+                    I can create 
                     <br>
-                    I can create <span class="absolute-black-text">supercharged videos</span> for your brand.
+                    <span class="bold">supercharged videos</span>
+                    <br>
+                    for your brand.
                 </p>
              
               
